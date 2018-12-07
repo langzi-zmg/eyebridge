@@ -1,0 +1,510 @@
+{
+    "apiVersion": "1.0.0",
+    "swaggerVersion": "1.2",
+    "basePath": "/",
+    "resourcePath": "/watcher",
+    "apis": [
+        {
+            "path": "/v1/watchers",
+            "description": "获取watcher list",
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "nickname": "Watcher list",
+                    "type": "",
+                    "items": {},
+                    "summary": "获取watcher list",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "page",
+                            "description": "页数|默认1",
+                            "dataType": "int",
+                            "type": "int",
+                            "format": "",
+                            "allowMultiple": false,
+                            "required": false,
+                            "minimum": 0,
+                            "maximum": 0
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "limit",
+                            "description": "每页条目数|默认10",
+                            "dataType": "int",
+                            "type": "int",
+                            "format": "",
+                            "allowMultiple": false,
+                            "required": false,
+                            "minimum": 0,
+                            "maximum": 0
+                        }
+                    ]
+                },
+                {
+                    "httpMethod": "POST",
+                    "nickname": "新增watcher",
+                    "type": "",
+                    "items": {},
+                    "summary": "新增watcher",
+                    "parameters": [
+                        {
+                            "paramType": "body",
+                            "name": "args",
+                            "description": "参数",
+                            "dataType": "gitlab.wallstcn.com.operation.backeye.model.form.Watcher",
+                            "type": "gitlab.wallstcn.com.operation.backeye.model.form.Watcher",
+                            "format": "",
+                            "allowMultiple": false,
+                            "required": true,
+                            "minimum": 0,
+                            "maximum": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/v1/watchers/{id}",
+            "description": "获取watcher详情",
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "nickname": "Watcher detail",
+                    "type": "",
+                    "items": {},
+                    "summary": "获取watcher详情",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "id",
+                            "description": "watcher ID",
+                            "dataType": "string",
+                            "type": "string",
+                            "format": "",
+                            "allowMultiple": false,
+                            "required": true,
+                            "minimum": 0,
+                            "maximum": 0
+                        }
+                    ]
+                },
+                {
+                    "httpMethod": "PUT",
+                    "nickname": "更新watcher",
+                    "type": "",
+                    "items": {},
+                    "summary": "更新watcher",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "id",
+                            "description": "watcher ID",
+                            "dataType": "string",
+                            "type": "string",
+                            "format": "",
+                            "allowMultiple": false,
+                            "required": true,
+                            "minimum": 0,
+                            "maximum": 0
+                        },
+                        {
+                            "paramType": "body",
+                            "name": "args",
+                            "description": "参数",
+                            "dataType": "gitlab.wallstcn.com.operation.backeye.model.Watcher",
+                            "type": "gitlab.wallstcn.com.operation.backeye.model.Watcher",
+                            "format": "",
+                            "allowMultiple": false,
+                            "required": true,
+                            "minimum": 0,
+                            "maximum": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/v1/watchers/{id}/assertions",
+            "description": "获取watcher检测详情",
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "nickname": "Watcher detail",
+                    "type": "",
+                    "items": {},
+                    "summary": "获取watcher检测详情",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "id",
+                            "description": "watcher ID",
+                            "dataType": "string",
+                            "type": "string",
+                            "format": "",
+                            "allowMultiple": false,
+                            "required": true,
+                            "minimum": 0,
+                            "maximum": 0
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "page",
+                            "description": "页数|默认1",
+                            "dataType": "int",
+                            "type": "int",
+                            "format": "",
+                            "allowMultiple": false,
+                            "required": false,
+                            "minimum": 0,
+                            "maximum": 0
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "limit",
+                            "description": "每页条目数|默认10",
+                            "dataType": "int",
+                            "type": "int",
+                            "format": "",
+                            "allowMultiple": false,
+                            "required": false,
+                            "minimum": 0,
+                            "maximum": 0
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "passed",
+                            "description": "if it is passed",
+                            "dataType": "string",
+                            "type": "string",
+                            "format": "",
+                            "allowMultiple": false,
+                            "required": false,
+                            "minimum": 0,
+                            "maximum": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/v1/watchers/{id}/availability",
+            "description": "fetch last 6 hours Availability   of specific ID",
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "nickname": "last 6 hours Availability",
+                    "type": "",
+                    "items": {},
+                    "summary": "fetch last 6 hours Availability   of specific ID",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "id",
+                            "description": "watcher ID",
+                            "dataType": "string",
+                            "type": "string",
+                            "format": "",
+                            "allowMultiple": false,
+                            "required": true,
+                            "minimum": 0,
+                            "maximum": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/v1/watchers/{id}/daily-availability",
+            "description": "fetch Availability list of specific ID",
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "nickname": "Availability list",
+                    "type": "",
+                    "items": {},
+                    "summary": "fetch Availability list of specific ID",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "id",
+                            "description": "watcher ID",
+                            "dataType": "string",
+                            "type": "string",
+                            "format": "",
+                            "allowMultiple": false,
+                            "required": true,
+                            "minimum": 0,
+                            "maximum": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/v1/watchers/{id}/hourly-availability",
+            "description": "fetch Availability list of specific ID",
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "nickname": "HourlyAvailability list",
+                    "type": "",
+                    "items": {},
+                    "summary": "fetch Availability list of specific ID",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "id",
+                            "description": "watcher ID",
+                            "dataType": "string",
+                            "type": "string",
+                            "format": "",
+                            "allowMultiple": false,
+                            "required": true,
+                            "minimum": 0,
+                            "maximum": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/v1/watchers/{id}/assertion",
+            "description": "fetch Assertion detail",
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "nickname": "Assertion detail",
+                    "type": "",
+                    "items": {},
+                    "summary": "fetch Assertion detail",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "id",
+                            "description": "assertion ID",
+                            "dataType": "string",
+                            "type": "string",
+                            "format": "",
+                            "allowMultiple": false,
+                            "required": true,
+                            "minimum": 0,
+                            "maximum": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/v1/watchers/assertions",
+            "description": "获取watchers的最新检测详情",
+            "operations": [
+                {
+                    "httpMethod": "POST",
+                    "nickname": "Watcher detail",
+                    "type": "",
+                    "items": {},
+                    "summary": "获取watchers的最新检测详情",
+                    "parameters": [
+                        {
+                            "paramType": "body",
+                            "name": "args",
+                            "description": "参数",
+                            "dataType": "gitlab.wallstcn.com.operation.backeye.model.WatcherIDs",
+                            "type": "gitlab.wallstcn.com.operation.backeye.model.WatcherIDs",
+                            "format": "",
+                            "allowMultiple": false,
+                            "required": true,
+                            "minimum": 0,
+                            "maximum": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/v1/watchers/del-watcher/{id}",
+            "description": "Delete Watcher  By ID",
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "nickname": "Delete Watcher  By ID",
+                    "type": "",
+                    "items": {},
+                    "summary": "Delete Watcher  By ID",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "id",
+                            "description": "watcher ID",
+                            "dataType": "string",
+                            "type": "string",
+                            "format": "",
+                            "allowMultiple": false,
+                            "required": true,
+                            "minimum": 0,
+                            "maximum": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "models": {
+        "gitlab.wallstcn.com.operation.backeye.model.Watcher": {
+            "id": "gitlab.wallstcn.com.operation.backeye.model.Watcher",
+            "properties": {
+                "created_at": {
+                    "type": "integer",
+                    "description": "",
+                    "items": {},
+                    "format": "",
+                    "defaultValue": 0
+                },
+                "cron": {
+                    "type": "string",
+                    "description": "",
+                    "items": {},
+                    "format": "",
+                    "defaultValue": ""
+                },
+                "desc": {
+                    "type": "string",
+                    "description": "",
+                    "items": {},
+                    "format": "",
+                    "defaultValue": ""
+                },
+                "disabled": {
+                    "type": "boolean",
+                    "description": "",
+                    "items": {},
+                    "format": "",
+                    "defaultValue": false
+                },
+                "id": {
+                    "type": "integer",
+                    "description": "",
+                    "items": {},
+                    "format": "int64",
+                    "defaultValue": 0
+                },
+                "name": {
+                    "type": "string",
+                    "description": "",
+                    "items": {},
+                    "format": "",
+                    "defaultValue": ""
+                },
+                "points": {
+                    "type": "string",
+                    "description": "",
+                    "items": {},
+                    "format": "",
+                    "defaultValue": ""
+                },
+                "updated_at": {
+                    "type": "integer",
+                    "description": "",
+                    "items": {},
+                    "format": "",
+                    "defaultValue": 0
+                }
+            }
+        },
+        "gitlab.wallstcn.com.operation.backeye.model.WatcherIDs": {
+            "id": "gitlab.wallstcn.com.operation.backeye.model.WatcherIDs",
+            "properties": {
+                "ids": {
+                    "type": "array",
+                    "description": "",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "format": ""
+                }
+            }
+        },
+        "gitlab.wallstcn.com.operation.backeye.model.form.Watcher": {
+            "id": "gitlab.wallstcn.com.operation.backeye.model.form.Watcher",
+            "properties": {
+                "created_at": {
+                    "type": "integer",
+                    "description": "",
+                    "items": {},
+                    "format": "",
+                    "defaultValue": 0
+                },
+                "cron": {
+                    "type": "string",
+                    "description": "",
+                    "items": {},
+                    "format": "",
+                    "defaultValue": ""
+                },
+                "desc": {
+                    "type": "string",
+                    "description": "",
+                    "items": {},
+                    "format": "",
+                    "defaultValue": ""
+                },
+                "name": {
+                    "type": "string",
+                    "description": "",
+                    "items": {},
+                    "format": "",
+                    "defaultValue": ""
+                },
+                "points": {
+                    "type": "array",
+                    "description": "",
+                    "items": {
+                        "$ref": "gitlab.wallstcn.com.operation.backeye.pkg.watcher.PointConfig"
+                    },
+                    "format": ""
+                },
+                "updated_at": {
+                    "type": "integer",
+                    "description": "",
+                    "items": {},
+                    "format": "",
+                    "defaultValue": 0
+                }
+            }
+        },
+        "gitlab.wallstcn.com.operation.backeye.pkg.watcher.PointConfig": {
+            "id": "gitlab.wallstcn.com.operation.backeye.pkg.watcher.PointConfig",
+            "properties": {
+                "conf": {
+                    "type": "string",
+                    "description": "",
+                    "items": {},
+                    "format": "",
+                    "defaultValue": ""
+                },
+                "desc": {
+                    "type": "string",
+                    "description": "",
+                    "items": {},
+                    "format": "",
+                    "defaultValue": ""
+                },
+                "name": {
+                    "type": "string",
+                    "description": "",
+                    "items": {},
+                    "format": "",
+                    "defaultValue": ""
+                },
+                "type": {
+                    "type": "string",
+                    "description": "",
+                    "items": {},
+                    "format": "",
+                    "defaultValue": ""
+                }
+            }
+        }
+    }
+}

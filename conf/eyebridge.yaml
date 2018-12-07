@@ -1,0 +1,32 @@
+micro:
+    svc_name: "gitlab.wallstcn.com.eyebridge"
+    svc_addr: ":10087"
+    etcd_addrs:
+            - "10.0.0.154:2379"
+            - "10.0.0.48:2379"
+            - "10.0.0.161:2379"
+    client_pool_size: 30
+    prometheus:
+        enabled: false
+        collectors:
+          - addr: "http://10.1.0.217:9091"
+    zipkin:
+        enabled: false
+        broker_addrs:
+          - "10.1.0.30:9092"
+          - "10.1.0.106:9092"
+          - "10.1.0.127:9092"
+
+log:
+    level: 4
+    output_dest: "file"
+    path: "/opt/log/eyebridge"
+
+
+mysql:
+    username: root
+    password: "253Huaerjie!"
+    host: "10.0.2.2"
+    port: 3306
+    db_name: "eyebridge"
+    not_print_sql: true

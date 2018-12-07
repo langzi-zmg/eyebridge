@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <title></title>
+    <style>
+        .wrapper {
+            width: 980px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+        }
+        .container_name {
+            color: #4674ca;
+        }
+        .survey {
+            text-align: center;
+        }
+        .error--text {
+            border-radius: 3px;
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+            padding: 0 20px 10px;
+            margin-right: 20px;
+            text-transform: capitalize;
+            background-color: #ec5e44;
+        }
+
+        .error--detail {
+            overflow: hidden;
+        }
+
+        .info {
+            /* color: #889092;
+            font-weight: 300; */
+            border-radius: 3px;
+            margin-right: 5px;
+            margin-bottom: 10px;
+            padding: 5px 10px 6px;
+            font-weight: 300;
+            display: inline-block;
+            background-color: #f4f5f6;
+        }
+
+        .h1{
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+
+        .h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0 0 15px;
+        }
+        .message--content {
+            border-radius: 4px;
+            font-size: 16px;
+            color: #3d4649;
+            word-wrap: break-word;
+            padding: 15px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="header">
+        <h1 class="h1">
+            New alert from
+            <span class="container_name"> {{.Container_Name}} </span>
+        </h1>
+    </div>
+    <div class="survey">
+<span class="error--text">ERROR :{{ if (eq .ENV "ivkprod")}} "生产环境"{{else}} "测试环境"{{ end }}</span>
+    </div>
+    <div>
+        <h1 class="h3">Tags</h1>
+        <div class="info">ENV:{{.ENV}}</div>
+        <div class="info">container_name:{{.Container_Name}}</div>
+        <div class="info">namespace_name:{{.Namespace_Name}}</div>
+        <div class="info">container_Image:{{.Container_Image}}</div>
+        <div class="info">host:{{.Host}}</div>
+    </div>
+    <div class="message">
+        <h1 class="h3">Message</h1>
+        <div class="message--content">{{.Message}}</div>
+    </div>
+</div>
+</body>
+</html>

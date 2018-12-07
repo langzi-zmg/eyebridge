@@ -1,0 +1,98 @@
+{
+    "apiVersion": "1.0.0",
+    "swaggerVersion": "1.2",
+    "basePath": "/",
+    "resourcePath": "/push",
+    "apis": [
+        {
+            "path": "/v1/watchers/add-watcher",
+            "description": "新增watcher",
+            "operations": [
+                {
+                    "httpMethod": "POST",
+                    "nickname": "新增watcher",
+                    "type": "",
+                    "items": {},
+                    "summary": "新增watcher",
+                    "parameters": [
+                        {
+                            "paramType": "body",
+                            "name": "args",
+                            "description": "参数",
+                            "dataType": "gitlab.wallstcn.com.operation.backeye.model.Watcher",
+                            "type": "gitlab.wallstcn.com.operation.backeye.model.Watcher",
+                            "format": "",
+                            "allowMultiple": false,
+                            "required": true,
+                            "minimum": 0,
+                            "maximum": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "models": {
+        "gitlab.wallstcn.com.operation.backeye.model.Watcher": {
+            "id": "gitlab.wallstcn.com.operation.backeye.model.Watcher",
+            "properties": {
+                "created_at": {
+                    "type": "integer",
+                    "description": "",
+                    "items": {},
+                    "format": "",
+                    "defaultValue": 0
+                },
+                "cron": {
+                    "type": "string",
+                    "description": "",
+                    "items": {},
+                    "format": "",
+                    "defaultValue": ""
+                },
+                "desc": {
+                    "type": "string",
+                    "description": "",
+                    "items": {},
+                    "format": "",
+                    "defaultValue": ""
+                },
+                "disabled": {
+                    "type": "boolean",
+                    "description": "",
+                    "items": {},
+                    "format": "",
+                    "defaultValue": false
+                },
+                "id": {
+                    "type": "integer",
+                    "description": "",
+                    "items": {},
+                    "format": "int64",
+                    "defaultValue": 0
+                },
+                "name": {
+                    "type": "string",
+                    "description": "",
+                    "items": {},
+                    "format": "",
+                    "defaultValue": ""
+                },
+                "points": {
+                    "type": "string",
+                    "description": "",
+                    "items": {},
+                    "format": "",
+                    "defaultValue": ""
+                },
+                "updated_at": {
+                    "type": "integer",
+                    "description": "",
+                    "items": {},
+                    "format": "",
+                    "defaultValue": 0
+                }
+            }
+        }
+    }
+}
